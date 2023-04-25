@@ -14,4 +14,5 @@ class olx(scrapy.Spider):
         prod=response.css('main._1oFYt.qmRfv')
         yield{
             'price':prod.css('span.T8y-z::text').get(),
+            'property_name':prod.css('span.dBLgK::text').get(),
         }    
