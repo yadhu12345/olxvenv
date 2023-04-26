@@ -20,4 +20,5 @@ class olx(scrapy.Spider):
             'breadcrumbs':prod.css('a._26_tZ::text').getall(),
             'image_url':prod.css('img._1Iq92::attr(src)').get(),
             'seller_name':prod.css('div.eHFQs::text').get(),
+            'location':prod.css('span._1RkZP::text').get(),
         }    
