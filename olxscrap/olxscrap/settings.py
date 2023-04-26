@@ -19,6 +19,9 @@ NEWSPIDER_MODULE = "olxscrap.spiders"
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+ITEM_PIPELINES = {
+   'olxscrap.pipelines.OlxscrapPipeline': 300,
+}
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
