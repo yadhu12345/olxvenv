@@ -16,7 +16,7 @@ class olx(scrapy.Spider):
             'property_name':prod.css('span.dBLgK::text').get(),
             'property_id':prod.css('strong::text')[2].get(),
             'breadcrumbs':prod.css('a._26_tZ::text').getall(),
-            'price':prod.css('span.T8y-z::text').extract(),
+            'price':prod.css('span.T8y-z::text').get(),
             'image_url':prod.css('img._1Iq92::attr(src)').get(),
             'description':prod.css('p::text').get(),
             'seller_name':prod.css('div.eHFQs::text').get(),
