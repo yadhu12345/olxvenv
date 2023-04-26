@@ -4,9 +4,20 @@
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.item import Field
+from scrapy.item import Item
 
 
 class OlxscrapItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    
+    property_name = Field()
+    property_id = Field()
+    breadcrumbs = Field()
+    price = Field()
+    image_url = Field()
+    description = Field()
+    seller_name = Field()
+    location = Field()
+    property_type = Field()
+    bathrooms = Field()
+    bedrooms = Field()

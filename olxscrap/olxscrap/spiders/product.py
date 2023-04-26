@@ -1,4 +1,6 @@
 import scrapy
+import requests
+headers = { }
 
 
 class olx(scrapy.Spider):
@@ -23,5 +25,5 @@ class olx(scrapy.Spider):
             'location':prod.css('span._1RkZP::text').get(),
             'property_type':prod.css('span.B6X7c::text').get(),
             'bathrooms':prod.css('span.B6X7c::text')[2].get(),
-            'bedrooms':prod.css('span.B6X7c::text')[1].get()
+            'bedrooms':prod.css('span.B6X7c::text')[1].get(),
         }    
