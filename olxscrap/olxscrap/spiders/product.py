@@ -22,5 +22,6 @@ class olx(scrapy.Spider):
             'seller_name':prod.css('div.eHFQs::text').get(),
             'location':prod.css('span._1RkZP::text').get(),
             'property_type':prod.css('span.B6X7c:text').get(),
-            'bathrooms':prod.css('span.B6X7c::text').get()
+            'bathrooms':prod.css('span.B6X7c::text').get(),
+            'bedrooms':prod.css('span.B6X7c::text').get()
         }    
