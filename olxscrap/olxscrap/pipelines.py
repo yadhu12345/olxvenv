@@ -38,7 +38,7 @@ class OlxscrapPipeline:
             PRIMARY KEY (id)
         )
         """)
-
+#Can't able to store data to database and to json file simultaneouly
     def process_item(self, item, spider):
         bread =">".join(map(str,item["breadcrumbs"]))
         pr = ' '.join(item["price"].values())
